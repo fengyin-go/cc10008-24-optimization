@@ -8,6 +8,7 @@ import SourceView from './views/source'
 import AggregateView from './views/aggregate'
 import FilterView from './views/filter'
 import ReportgenView from './views/reportgen'
+import ReportBatchView from './views/report-batch'
 import AnomalyView from './views/anomaly'
 import DrillView from './views/drill'
 import CompareView from './views/compare'
@@ -21,7 +22,7 @@ import CacheView from './views/cache'
 import TagView from './views/tag'
 import ShareView from './views/share'
 
-const navItems = [{ label: "运营概览", path: "/" }, { label: "交互查询", path: "/query" }, { label: "可视化图表", path: "/chart" }, { label: "数据源接入", path: "/source" }, { label: "聚合计算", path: "/aggregate" }, { label: "数据筛选", path: "/filter" }, { label: "报告生成", path: "/reportgen" }, { label: "异常检测", path: "/anomaly" }, { label: "多维下钻", path: "/drill" }, { label: "对比分析", path: "/compare" }, { label: "分析流水线", path: "/pipeline" }, { label: "数据集管理", path: "/datastore" }, { label: "趋势预测", path: "/forecast" }, { label: "数据分片", path: "/segment" }, { label: "调度管理", path: "/scheduler" }, { label: "通知分发", path: "/notify" }, { label: "查询缓存", path: "/cache" }, { label: "数据标签", path: "/tag" }, { label: "数据分享", path: "/share" }]
+const navItems = [{ label: "运营概览", path: "/" }, { label: "交互查询", path: "/query" }, { label: "可视化图表", path: "/chart" }, { label: "数据源接入", path: "/source" }, { label: "聚合计算", path: "/aggregate" }, { label: "数据筛选", path: "/filter" }, { label: "报告生成", path: "/reportgen" }, { label: "报告批次中心", path: "/report-batch" }, { label: "异常检测", path: "/anomaly" }, { label: "多维下钻", path: "/drill" }, { label: "对比分析", path: "/compare" }, { label: "分析流水线", path: "/pipeline" }, { label: "数据集管理", path: "/datastore" }, { label: "趋势预测", path: "/forecast" }, { label: "数据分片", path: "/segment" }, { label: "调度管理", path: "/scheduler" }, { label: "通知分发", path: "/notify" }, { label: "查询缓存", path: "/cache" }, { label: "数据标签", path: "/tag" }, { label: "数据分享", path: "/share" }]
 
 export default function App() {
   const [operator] = useState('值班管理员')
@@ -51,6 +52,7 @@ export default function App() {
           <Route path="/aggregate" element={<AggregateView />} />
           <Route path="/filter" element={<FilterView />} />
           <Route path="/reportgen" element={<ReportgenView />} />
+          <Route path="/report-batch" element={<ReportBatchView />} />
           <Route path="/anomaly" element={<AnomalyView />} />
           <Route path="/drill" element={<DrillView />} />
           <Route path="/compare" element={<CompareView />} />
